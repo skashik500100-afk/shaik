@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Placement Portal</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <div class="dashboard">
+    <div class="header">
+      <h2>Admin Dashboard</h2>
+      <p>Placement Management System</p>
+    </div>
+
+    <div class="menu">
+      <button onclick="showSection('users')">Manage Users</button>
+      <button onclick="showSection('jobs')">Manage Jobs</button>
+      <button onclick="showSection('applications')">Applications</button>
+    </div>
+
+    <div class="content active" id="users">
+      <h3>Registered Users</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+        <tr>
+          <td>Mamidi Teja Kiran</td>
+          <td>2500031053@kluniversity.in</td>
+          <td>Employer</td>
+        </tr>
+        <tr>
+          <td>Saleem Shaik</td>
+          <td>2500031173@kluniversity.in</td>
+          <td>Student</td>
+        </tr>
+        <tr>
+            <td>Pokala Sai Srinivas</td>
+            <td>2500031416@kluniversity.in</td>
+            <td>Placement Officer</td>
+        </tr>
+      </table>
+    </div>
+
+    
+    <div class="content" id="jobs">
+      <h3>Job Listings</h3>
+      <table>
+        <tr>
+          <th>Job Title</th>
+          <th>Company Logo</th>
+          <th>Company</th>
+          <th>Deadline</th>
+        </tr>
+        <tr>
+          <td>Software Internship</td>
+          <td><img src="ibm-logo.webp" height="30px" width="30px"></td>
+          <td>IBM</td>
+          <td>30/11/25</td>
+        </tr>
+        <tr>
+          <td>Web Developer</td>
+          <td><img src="google-logo.webp" height="30px" width="30px" ></td>
+          <td>GOOGLE</td>
+          <td>10/12/25</td>
+        </tr>
+        <tr>
+            <td>Mobile App Developer</td>
+            <td><img src="microsoft-logo.png" height="30px" width="30px"></td>
+            <td>MICROSOFT</td>
+            <td>26/12/25</td>
+        </tr>
+        <tr>
+            <td>Data Scientist</td>
+            <td><img src="bosch-logo.png" height="30px" width="30px"></td>
+            <td>BOSCH</td>
+            <td>5/12/25</td>
+        </tr>
+        <tr>
+            <td>Cloud Engineer</td>
+            <td><img src="jp-logo.jpg" height="30px" width="30px"></td>
+            <td>JP MORGAN</td>
+            <td>26/3/25</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="content" id="applications">
+      <h3>Student Applications</h3>
+      <table>
+        <tr>
+          <th>Student Name</th>
+          <th>Job Applied</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Mamidi Teja kiran</td>
+          <td>Software Intern</td>
+          <td>Shortlisted</td>
+        </tr>
+        <tr>
+          <td>Saleem Shaik</td>
+          <td>Web Developer</td>
+          <td>Meritlisted</td>
+        </tr>
+        <tr>
+            <td>Pokala Sai Srinivas</td>
+            <td>Frontend Developer</td>
+            <td>Shortlisted</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll(".content");
+      sections.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>

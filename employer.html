@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employer Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <aside>
+    <h2>🏭 Employer</h2>
+    <button onclick="show('post')">Post Job</button>
+    <button onclick="show('apps')">Applications</button>
+    <button onclick="show('summary')">Summary</button>
+  </aside>
+
+  <main>
+    <section id="post" class="page active">
+      <h1>Post a New Job</h1>
+      <input placeholder="Job Title">
+      <input placeholder="Location">
+      <input placeholder="CTC / Package">
+      <button class="primary">Post Job</button>
+    </section>
+
+    <section id="apps" class="page">
+      <h1>Applications</h1>
+      <table>
+        <tr><th>Name</th><th>Branch</th><th>Status</th></tr>
+        <tr><td>Saleem Shaik</td><td>CSE</td><td>Shortlisted</td></tr>
+        <tr><td>Sai Srinivas</td><td>ECE</td><td>Review</td></tr>
+      </table>
+    </section>
+
+    <section id="summary" class="page">
+      <h1>Hiring Summary</h1>
+      <div class="cards">
+        <div class="card">120<br><span>Applicants</span></div>
+        <div class="card">35<br><span>Shortlisted</span></div>
+        <div class="card">12<br><span>Selected</span></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>

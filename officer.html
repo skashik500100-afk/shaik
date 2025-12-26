@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Placement Officer Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body></body>
+
+<div class="glass-card">
+  <header>
+    <h1>🏢 Placement Officer Panel</h1>
+    <p>Placement Monitoring & Control</p>
+  </header>
+
+  <nav>
+    <button onclick="showTab('students')">Students</button>
+    <button onclick="showTab('companies')">Companies</button>
+    <button onclick="showTab('analytics')">Analytics</button>
+  </nav>
+
+  <section id="students" class="tab active">
+    <h2>🎓 Student Overview</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Saleem Shaik</td>
+        <td>CSE</td>
+        <td class="placed">Placed</td>
+      </tr>
+      <tr>
+        <td>Mamidi Teja Kiran</td>
+        <td>IT</td>
+        <td class="pending">Pending</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="companies" class="tab">
+    <h2>🏭 Visiting Companies</h2>
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>Role</th>
+        <th>Date</th>
+      </tr>
+      <tr>
+        <td>Google</td>
+        <td>Software Engineer</td>
+        <td>15 Feb 2026</td>
+      </tr>
+      <tr>
+        <td>IBM</td>
+        <td>Cloud Engineer</td>
+        <td>22 Feb 2026</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="analytics" class="tab">
+    <h2>📊 Placement Analytics</h2>
+    <div class="stats">
+      <div class="stat-card">
+        <h3>78%</h3>
+        <p>Placement Rate</p>
+      </div>
+      <div class="stat-card">
+        <h3>120+</h3>
+        <p>Companies</p>
+      </div>
+      <div class="stat-card">
+        <h3>950+</h3>
+        <p>Students</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>

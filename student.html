@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+  <header>
+    <h1>🎓 Student Placement Portal</h1>
+    <nav>
+      <button onclick="showSection('jobs')">Available Jobs</button>
+      <button onclick="showSection('applications')">My Applications</button>
+      <button onclick="showSection('profile')">My Profile</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="jobs" class="active">
+      <h2>Available Job Opportunities</h2>
+      <table>
+        <tr>
+          <th>Company Logo</th>
+          <th>Company Name</th>
+          <th>Role</th>
+          <th>Location</th>
+          <th>Apply</th>
+        </tr>
+        <tr>
+          <td><img src="google-logo.webp" height="50px" width="50px"></td>
+          <td>GOOGLE</td>
+          <td>Software Engineer</td>
+          <td>Bangalore</td>
+          <td><button class="apply-btn" onclick="applyJob('Google')">Apply</button></td>
+        </tr>
+        <tr>
+          <td><img src="microsoft-logo.png" alt="Microsoft"></td>
+          <td>MICROSOFT</td>
+          <td>Data Analyst</td>
+          <td>Hyderabad</td>
+          <td><button class="apply-btn" onclick="applyJob('Microsoft')">Apply</button></td>
+        </tr>
+         <tr>
+          <td><img src="ibm-logo.webp" height="50px" width="50px"></td>
+          <td>IBM</td>
+          <td>Cloud Engineering</td>
+          <td>Chennai</td>
+          <td><button class="apply-btn" onclick="applyJob('IBM')">Apply</button></td>
+        </tr>
+         <tr>
+          <td><img src="bosch-logo.png" height="50px" width="50px"></td>
+          <td>BOSCH</td>
+          <td>Software</td>
+          <td>Mumbai</td>
+          <td><button class="apply-btn" onclick="applyJob('BOSCH')">Apply</button></td>
+        </tr>
+         <tr>
+          <td><img src="jp-logo.jpg" height="50px" width="50px"></td>
+          <td>JP MORGAN</td>
+          <td>Mobile App Developer</td>
+          <td>Bihar</td>
+          <td><button class="apply-btn" onclick="applyJob('JP MORGAN')">Apply</button></td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="applications">
+      <h2>My Applications</h2>
+      <p id="applicationList">No applications yet.</p>
+    </section>
+
+    <section id="profile">
+      <h2>My Profile</h2>
+      <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" required><br>
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required><br>
+        <label>Course:</label>
+        <input type="text" placeholder="Your course" required><br>
+        <button type="submit">Update Profile</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Placement Interaction System | Student Dashboard</p>
+  </footer>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
+    }
+    function applyJob(companyName) {
+      const list = document.getElementById("applicationList");
+      if (list.innerText === "No applications yet.") {
+        list.innerText = "";
+      }
+      const item = document.createElement("p");
+      item.textContent = "Applied for " + companyName + " ✔";
+      list.appendChild(item);
+      alert("Application submitted to " + companyName);
+    }
+  </script>
+</body>
+</html>

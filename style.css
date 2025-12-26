@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(BGI.jpg);
+     background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+  color: #2e3a59;
+  margin-top: 30px;
+}
+
+.login-box {
+  height: 400px;
+  margin-left: 150px;
+  margin-top: 70px;
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  justify-items: center;
+  background: linear-gradient(#28C1BF,#BBBD5A);
+  
+}
+.login-box button {
+  display: block;
+  width: 50%;
+  margin: 50px 0;
+  padding: 10px;
+  background: #2e3a59;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  margin: 8px;
+  padding: 10px 20px;
+  background: #2e3a59;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #43558b;
+}
+.container {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.login-box button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 255, 255, 0.4);
+  background: #437b8b;
+}
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position:200px0; }
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loader.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.spinner {
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top: 6px solid #00d4ff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg);}
+}

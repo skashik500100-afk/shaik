@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Placement Interaction and Tracking System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+
+  <div class="container">
+    <div class="login-box">
+      <h2>Login as:</h2>
+      <button onclick="showLoader('admin.html')">Admin</button>
+      <button onclick="showLoader('student.html')">Student</button>
+      <button onclick="showLoader('employer.html')">Employer</button>
+      <button onclick="showLoader('officer.html')">Placement Officer</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
